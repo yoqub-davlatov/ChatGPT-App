@@ -1,6 +1,7 @@
 import 'package:chatgpt_chat/constants/constants.dart';
 import 'package:chatgpt_chat/services/assets_manager.dart';
 import 'package:chatgpt_chat/widgets/chat_widget.dart';
+import 'package:chatgpt_chat/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -40,6 +41,36 @@ class _ChatScreenState extends State<ChatScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Image.asset(AssetsManager.openAILogo),
         ),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              await showModalBottomSheet(
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(20),
+                    ),
+                  ),
+                  backgroundColor: scaffoldBackground,
+                  context: context,
+                  builder: (context) {
+                    return const Padding(
+                      padding: EdgeInsets.all(18.0),
+                      child: Row(
+                        children: [
+                          Flexible(
+                            child: TextWidget(
+                              label: "Chosen Model",
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  });
+            },
+            icon: const Icon(Icons.more_vert_rounded),
+          ),
+        ],
       ),
       body: SafeArea(
         child: Column(
