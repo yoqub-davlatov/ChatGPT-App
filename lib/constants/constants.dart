@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../widgets/text_widget.dart';
 
+const String openAIkey = "*******************************"; // enter your key here!
+
+const String apiUrl = "https://api.openai.com/v1";
+
 Color scaffoldBackground = const Color(0xFF343541);
 Color cardColor = const Color(0xff444654);
 
