@@ -1,32 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/text_widget.dart';
-
-const String openAIkey = "*******************************"; // enter your key here!
+const String hiddenKey = "*******************************";
+const String openAIkey = hiddenKey;
 
 const String apiUrl = "https://api.openai.com/v1";
 
 Color scaffoldBackground = const Color(0xFF343541);
 Color cardColor = const Color(0xff444654);
-
-final List<String> models = [
-  "Model1",
-  "Model2",
-  "Model3",
-  "Model4",
-  "Model5",
-  "Model6",
-];
-
-List<DropdownMenuItem<String>>? get getModelsItem {
-  return List<DropdownMenuItem<String>>.generate(
-    models.length,
-    (index) => DropdownMenuItem(
-      value: models[index],
-      child: TextWidget(label: models[index], fontSize: 15),
-    ),
-  );
-}
 
 final chatMessages = [
   {
