@@ -58,7 +58,7 @@ class ApiService {
       }
       List<ChatModels> chatList = [];
       if (jsonResponse['choices'].length > 0) {
-        log("jsonResponse[choices][text] : ${jsonResponse['choices'][0]['text']}");
+        // log("jsonResponse[choices][text] : ${jsonResponse['choices'][0]['text']}");
         chatList = List.generate(
           jsonResponse['choices'].length,
           (index) => ChatModels(
