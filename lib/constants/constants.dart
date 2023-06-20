@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const String hiddenKey = "*******************************";
-const String openAIkey = "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";
+const String openAIkey = hiddenKey;
 
 const String apiUrl = "https://api.openai.com/v1";
 
